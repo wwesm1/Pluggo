@@ -137,7 +137,6 @@ main .hero .signup-container {
   display: flex;
   align-items: center;
   background-color: #1b1b1b;
-  /* matches dark theme */
   border-radius: 40px;
   padding: 0 4px;
   max-width: 400px;
@@ -160,7 +159,6 @@ main .hero .email-input::placeholder {
 }
 main .hero .signup-btn {
   background-color: #f6ff66;
-  /* bright yellow like screenshot */
   color: #000;
   border: none;
   border-radius: 40px;
