@@ -1,0 +1,130 @@
+nav {
+    @include flex-space-between;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 60px;
+
+    img {
+        width: 140px;
+    }
+
+    .nav__items {
+        @include flex-center;
+        gap: 10px;
+
+        li {
+            font-size: 17px;
+            font-weight: $fw-500;
+            color: $white;
+            border: 1px solid transparent;
+            padding: 8px 23px;
+            border-radius: 30px;
+            transition: $tr-standard;
+
+            &:hover {
+                border: 1px solid $white;
+            }
+        }
+    }
+
+    .log__btns {
+        @include flex-center;
+        gap: 12px;
+    }
+
+    .flip-btn {
+        position: relative;
+        height: 42px;
+        padding: 0 24px;
+        border-radius: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: transparent;
+        color: $white;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .flip-btn .text {
+        display: flex;
+        flex-direction: column;
+        transition: transform .35s ease;
+    }
+
+    .flip-btn span span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 42px;
+    }
+
+    .flip-btn:hover .text {
+        transform: translateY(-42px);
+    }
+
+    .border_btn {
+        border-left: 2px solid $white;
+        padding: 0 12px;
+    }
+}
+
+main {
+    .hero {
+        background: url('../assets/photos/background.avif') 50% 50% no-repeat;
+        background-size: cover;
+        max-width: 1490px;
+        margin: 0 auto;
+
+        .signup-container {
+            display: flex;
+            align-items: center;
+            background-color: #1b1b1b;
+            /* matches dark theme */
+            border-radius: 40px;
+            padding: 0 4px;
+            max-width: 400px;
+            height: 42px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .email-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 0 16px;
+            color: white;
+            font-size: 14px;
+            height: 100%;
+            outline: none;
+        }
+
+        .email-input::placeholder {
+            color: #aaa;
+        }
+
+        .signup-btn {
+            background-color: #f6ff66;
+            /* bright yellow like screenshot */
+            color: #000;
+            border: none;
+            border-radius: 40px;
+            padding: 0 20px;
+            height: 34px;
+            margin-right: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .signup-btn:hover {
+            background-color: #e5f44d;
+        }
+    }
+}
