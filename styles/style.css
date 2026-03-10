@@ -23,6 +23,7 @@ body {
   min-height: 100vh;
   background-color: #090909;
   font-family: "Inter", sans-serif;
+  overflow-x: hidden;
 }
 
 ul,
@@ -287,7 +288,7 @@ main .features {
 main .features .dot1 {
   position: absolute;
   color: #ffffff;
-  top: 5rem;
+  top: -3rem;
   left: -2rem;
   font-size: 14px;
   opacity: 0.4;
@@ -295,17 +296,17 @@ main .features .dot1 {
 main .features .dot2 {
   position: absolute;
   color: #ffffff;
-  top: 6rem;
+  top: -1rem;
   right: 1rem;
   font-size: 14px;
-  opacity: 0.4;
+  opacity: 0.8;
 }
 main .features .features__description {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-weight: 500;
-  margin-top: 6rem;
+  margin-top: 8rem;
 }
 main .features .features__description .features__about {
   display: flex;
@@ -344,6 +345,36 @@ main .features .feature__image .option .option_about img {
 }
 main .features .feature__img {
   width: 500px;
+}
+main .how_it_works {
+  margin-top: 10rem;
+}
+main .how_it_works .how_it_works_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .how_it_works .how_it_works_title .about {
+  margin-top: 1rem;
+}
+main .how_it_works .how_it_works_images {
+  margin-top: 4rem;
+}
+main .how_it_works .how_it_works_images .grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .how_it_works .how_it_works_images .grid .img1 {
+  width: 687px;
+  object-fit: cover;
+}
+main .how_it_works .how_it_works_images .grid .img2 {
+  width: 483px;
+}
+main .how_it_works .how_it_works_images .grid .img3 {
+  border-radius: 30px;
+  margin-top: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

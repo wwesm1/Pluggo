@@ -213,7 +213,7 @@ main {
         .dot1 {
             position: absolute;
             color: $white;
-            top: 5rem;
+            top: -3rem;
             left: -2rem;
             font-size: 14px;
             opacity: 0.4;
@@ -222,16 +222,16 @@ main {
         .dot2 {
             position: absolute;
             color: $white;
-            top: 6rem;
+            top: -1rem;
             right: 1rem;
             font-size: 14px;
-            opacity: 0.4;
+            opacity: 0.8;
         }
 
         .features__description {
             @include flex-space-between;
             font-weight: 500;
-            margin-top: 6rem;
+            margin-top: 8rem;
 
             .features__about {
                 @include flex-column;
@@ -274,6 +274,40 @@ main {
 
         .feature__img {
             width: 500px;
+        }
+    }
+
+    .how_it_works {
+        margin-top: 10rem;
+
+        .how_it_works_title {
+            @include flex-space-between;
+
+            .about {
+                margin-top: 1rem;
+            }
+        }
+
+        .how_it_works_images {
+            margin-top: 4rem;
+
+            .grid{
+                @include flex-space-between;
+
+                .img1 {
+                    width: 687px;
+                    object-fit: cover;
+                }
+
+                .img2 {
+                    width: 483px;
+                }
+
+                .img3 {
+                    border-radius: 30px;
+                    margin-top: 1.5rem;
+                }
+            }
         }
     }
 }
