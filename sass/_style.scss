@@ -293,6 +293,38 @@ main {
 
             .grid{
                 @include flex-space-between;
+                margin-top: 1.5rem;
+
+                .grid1,
+                .grid2,
+                .grid3,
+                .grid4,
+                .grid5 {
+                    position: relative;
+                }
+
+                .grid_title {
+                    position: absolute;
+                    bottom: 5.8rem;
+                    font-size: 30px;
+                    font-weight: 500;
+                    left: 2rem;
+                }
+
+                .grid3 {
+                    .grid_title {
+                        bottom: 4.7rem;
+                    }
+                }
+
+                .grid_description {
+                    color: $white;
+                    position: absolute;
+                    bottom: 2rem;
+                    left: 2rem;
+                    font-size: 15px;
+                    opacity: 0.6;
+                }
 
                 .img1 {
                     width: 687px;
@@ -305,7 +337,15 @@ main {
 
                 .img3 {
                     border-radius: 30px;
-                    margin-top: 1.5rem;
+                }
+
+                .img4 {
+                    width: 485px;
+                    object-fit: cover;
+                }
+
+                .img5 {
+                    width: 685px;
                 }
             }
         }

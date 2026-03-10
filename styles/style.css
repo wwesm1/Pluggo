@@ -364,6 +364,32 @@ main .how_it_works .how_it_works_images .grid {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 1.5rem;
+}
+main .how_it_works .how_it_works_images .grid .grid1,
+main .how_it_works .how_it_works_images .grid .grid2,
+main .how_it_works .how_it_works_images .grid .grid3,
+main .how_it_works .how_it_works_images .grid .grid4,
+main .how_it_works .how_it_works_images .grid .grid5 {
+  position: relative;
+}
+main .how_it_works .how_it_works_images .grid .grid_title {
+  position: absolute;
+  bottom: 5.8rem;
+  font-size: 30px;
+  font-weight: 500;
+  left: 2rem;
+}
+main .how_it_works .how_it_works_images .grid .grid3 .grid_title {
+  bottom: 4.7rem;
+}
+main .how_it_works .how_it_works_images .grid .grid_description {
+  color: #ffffff;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  font-size: 15px;
+  opacity: 0.6;
 }
 main .how_it_works .how_it_works_images .grid .img1 {
   width: 687px;
@@ -374,7 +400,13 @@ main .how_it_works .how_it_works_images .grid .img2 {
 }
 main .how_it_works .how_it_works_images .grid .img3 {
   border-radius: 30px;
-  margin-top: 1.5rem;
+}
+main .how_it_works .how_it_works_images .grid .img4 {
+  width: 485px;
+  object-fit: cover;
+}
+main .how_it_works .how_it_works_images .grid .img5 {
+  width: 685px;
 }
 
 /*# sourceMappingURL=style.css.map */
