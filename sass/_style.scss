@@ -208,11 +208,18 @@ main {
     }
 
     .features {
-        
+
 
         .features__description {
-            @include flex-center;
-            margin-top: 7rem;
+            @include flex-space-between;
+            font-weight: 400;
+            margin-top: 6rem;
+
+            .features__about {
+                @include flex-column;
+                align-items: start;
+                gap: 15px;
+            }
 
             .features__title {
                 background-color: #1b1626;
@@ -221,6 +228,31 @@ main {
                 color: $white;
                 border-radius: 40px;
             }
+
+            .features_about {
+                font-size: 50px;
+                font-weight: $fw-500;
+            }
+
+            .features_description {
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+
+        .feature__image {
+            @include flex-space-between;
+            margin-top: 4rem;
+
+            .option {
+                display: flex;
+                color: white;
+            }
+        }
+
+
+        .feature__img {
+            width: 500px;
         }
     }
 }

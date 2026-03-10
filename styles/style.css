@@ -51,15 +51,14 @@ textarea {
 
 .container {
   margin: 0 auto;
-  max-width: 1250px;
+  max-width: 1190px;
   width: 90%;
 }
 
 .gradient-text {
-  font-size: 64px;
   font-weight: 700;
   line-height: 1.2;
-  background: linear-gradient(90deg, #ffffff 0%, #e7e1d8 40%, #cfc3b2 70%, #ffffff 100%);
+  background: linear-gradient(90deg, #ffffff 0%, #e7e1d8 40%, #af9f88 70%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -260,8 +259,15 @@ main .hero .pluggo__img {
 main .features .features__description {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 7rem;
+  justify-content: space-between;
+  font-weight: 400;
+  margin-top: 6rem;
+}
+main .features .features__description .features__about {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
 }
 main .features .features__description .features__title {
   background-color: #1b1626;
@@ -269,6 +275,27 @@ main .features .features__description .features__title {
   display: inline;
   color: #ffffff;
   border-radius: 40px;
+}
+main .features .features__description .features_about {
+  font-size: 50px;
+  font-weight: 500;
+}
+main .features .features__description .features_description {
+  font-size: 18px;
+  line-height: 28px;
+}
+main .features .feature__image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+main .features .feature__image .option {
+  display: flex;
+  color: white;
+}
+main .features .feature__img {
+  width: 500px;
 }
 
 /*# sourceMappingURL=style.css.map */
