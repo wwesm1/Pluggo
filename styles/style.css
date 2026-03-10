@@ -49,6 +49,12 @@ textarea {
   font: inherit;
 }
 
+.nav-container {
+  margin: 0 auto;
+  max-width: 1260px;
+  width: 90%;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1190px;
@@ -56,9 +62,9 @@ textarea {
 }
 
 .gradient-text {
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.2;
-  background: linear-gradient(90deg, #ffffff 0%, #e7e1d8 40%, #af9f88 70%, #ffffff 100%);
+  background: linear-gradient(90deg, #ffffff 0%, #e7e1d8 50%, #a99a85 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -283,6 +289,7 @@ main .features .features__description .features_about {
 main .features .features__description .features_description {
   font-size: 18px;
   line-height: 28px;
+  color: #ffffff;
 }
 main .features .feature__image {
   display: flex;
@@ -290,9 +297,24 @@ main .features .feature__image {
   justify-content: space-between;
   margin-top: 4rem;
 }
-main .features .feature__image .option {
+main .features .feature__image .features__options {
   display: flex;
-  color: white;
+  flex-direction: column;
+  gap: 30px;
+}
+main .features .feature__image .option {
+  color: #ffffff;
+}
+main .features .feature__image .option .option_about {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  gap: 20px;
+}
+main .features .feature__image .option .option_about img {
+  background-color: #313131;
+  padding: 10px;
+  border-radius: 50%;
 }
 main .features .feature__img {
   width: 500px;
