@@ -63,17 +63,35 @@ textarea {
 }
 
 .gradient-text {
-  font-weight: 400;
-  line-height: 1.2;
+    font-weight: 400;
+    line-height: 1.2;
 
-  background: linear-gradient(
-    90deg,
-    #ffffff 0%,
-    #e7e1d8 50%,
-    #a99a85 100%,
-  );
+    background: linear-gradient(90deg,
+            #ffffff 0%,
+            #e7e1d8 50%,
+            #a99a85 100%,
+        );
 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.title {
+    background-color: #1b1626;
+    padding: 10px 15px;
+    display: inline;
+    color: $white;
+    border-radius: 40px;
+}
+
+.about {
+    font-size: 50px;
+    font-weight: $fw-500;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 28px;
+    color: $white;
 }

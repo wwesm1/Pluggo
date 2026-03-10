@@ -70,6 +70,25 @@ textarea {
   background-clip: text;
 }
 
+.title {
+  background-color: #1b1626;
+  padding: 10px 15px;
+  display: inline;
+  color: #ffffff;
+  border-radius: 40px;
+}
+
+.about {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -262,11 +281,30 @@ main .hero .pluggo__img {
   position: absolute;
   bottom: 0;
 }
+main .features {
+  position: relative;
+}
+main .features .dot1 {
+  position: absolute;
+  color: #ffffff;
+  top: 5rem;
+  left: -2rem;
+  font-size: 14px;
+  opacity: 0.4;
+}
+main .features .dot2 {
+  position: absolute;
+  color: #ffffff;
+  top: 6rem;
+  right: 1rem;
+  font-size: 14px;
+  opacity: 0.4;
+}
 main .features .features__description {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 6rem;
 }
 main .features .features__description .features__about {
@@ -274,22 +312,6 @@ main .features .features__description .features__about {
   flex-direction: column;
   align-items: start;
   gap: 15px;
-}
-main .features .features__description .features__title {
-  background-color: #1b1626;
-  padding: 12px 15px;
-  display: inline;
-  color: #ffffff;
-  border-radius: 40px;
-}
-main .features .features__description .features_about {
-  font-size: 50px;
-  font-weight: 500;
-}
-main .features .features__description .features_description {
-  font-size: 18px;
-  line-height: 28px;
-  color: #ffffff;
 }
 main .features .feature__image {
   display: flex;
@@ -300,7 +322,11 @@ main .features .feature__image {
 main .features .feature__image .features__options {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
+}
+main .features .feature__image .features__options .option__description {
+  margin-left: 4rem;
+  margin-top: 1rem;
 }
 main .features .feature__image .option {
   color: #ffffff;

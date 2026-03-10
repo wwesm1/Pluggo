@@ -208,35 +208,35 @@ main {
     }
 
     .features {
+        position: relative;
+
+        .dot1 {
+            position: absolute;
+            color: $white;
+            top: 5rem;
+            left: -2rem;
+            font-size: 14px;
+            opacity: 0.4;
+        }
+
+        .dot2 {
+            position: absolute;
+            color: $white;
+            top: 6rem;
+            right: 1rem;
+            font-size: 14px;
+            opacity: 0.4;
+        }
 
         .features__description {
             @include flex-space-between;
-            font-weight: 400;
+            font-weight: 500;
             margin-top: 6rem;
 
             .features__about {
                 @include flex-column;
                 align-items: start;
                 gap: 15px;
-            }
-
-            .features__title {
-                background-color: #1b1626;
-                padding: 12px 15px;
-                display: inline;
-                color: $white;
-                border-radius: 40px;
-            }
-
-            .features_about {
-                font-size: 50px;
-                font-weight: $fw-500;
-            }
-
-            .features_description {
-                font-size: 18px;
-                line-height: 28px;
-                color: $white;
             }
         }
 
@@ -246,7 +246,12 @@ main {
 
             .features__options {
                 @include flex-column;
-                gap: 30px;
+                gap: 50px;
+
+                .option__description {
+                    margin-left: 4rem;
+                    margin-top: 1rem;
+                }
             }
 
             .option {
