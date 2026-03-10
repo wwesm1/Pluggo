@@ -26,3 +26,14 @@
     flex-direction: column;
     align-items: center;
 }
+
+@mixin soft-striped-bg($color1: #000, $color2: #0b0b0b, $width: 400px) {
+  background: repeating-linear-gradient(
+    90deg,
+    $color1,
+    $color1 ($width * 0.4),
+    $color2 ($width * 0.5),
+    $color1 ($width * 0.6),
+    $color1 $width
+  );
+}

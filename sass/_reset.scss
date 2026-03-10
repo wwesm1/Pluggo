@@ -55,3 +55,21 @@ textarea {
     max-width: 1250px;
     width: 90%;
 }
+
+.gradient-text {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #e7e1d8 40%,
+    #cfc3b2 70%,
+    #ffffff 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

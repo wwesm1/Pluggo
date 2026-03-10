@@ -55,6 +55,16 @@ textarea {
   width: 90%;
 }
 
+.gradient-text {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #ffffff 0%, #e7e1d8 40%, #cfc3b2 70%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -137,6 +147,8 @@ main .hero {
   flex-direction: column;
   align-items: center;
   background: linear-gradient(to bottom, transparent 80%, #0e0014 100%), url("../assets/photos/background.avif");
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
   background-size: cover;
   background-position: center;
   min-width: 100%;
@@ -245,21 +257,18 @@ main .hero .pluggo__img {
   position: absolute;
   bottom: 0;
 }
-main .features {
-  position: relative;
-  background-color: #000000;
+main .features .features__description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7rem;
 }
-main .features::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 300px;
-  /* Height of the fade effect */
-  background: linear-gradient(to bottom, transparent, #000000);
-  pointer-events: none;
-  /* Allows you to still click things "under" the fade */
+main .features .features__description .features__title {
+  background-color: #1b1626;
+  padding: 12px 15px;
+  display: inline;
+  color: #ffffff;
+  border-radius: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
