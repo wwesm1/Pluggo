@@ -1,14 +1,15 @@
 nav {
     @include flex-space-between;
-    position: absolute;
+    position: fixed;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px;
-    background: rgba(255, 255, 255, 0.05);
+    background-color: transparent;
+    z-index: 1000;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 60px;
 
     img {
@@ -75,20 +76,85 @@ nav {
 }
 
 main {
+    padding: 20px;
+
     .hero {
-        background: url('../assets/photos/background.avif') 50% 50% no-repeat;
+        @include flex-column-center;
+        background:
+            linear-gradient(to bottom, transparent 80%, #0e0014 100%),
+            url('../assets/photos/background.avif');
         background-size: cover;
-        max-width: 1490px;
+        background-position: center;
+        min-width: 100%;
+        height: 143vh;
         margin: 0 auto;
+        flex-flow: column;
+        gap: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+
+        .dot {
+            color: $white;
+            position: absolute;
+            font-size: 13px;
+        }
+
+        .dot1 {
+            top: 11rem;
+            left: 10rem;
+        }
+
+        .dot2 {
+            top: 13rem;
+            right: 10rem;
+        }
+
+        .dot3 {
+            top: 20rem;
+            left: 13rem;
+            opacity: 0.7;
+        }
+
+        .dot4 {
+            top: 32rem;
+            right: 10rem;
+        }
+
+        .dashboard {
+            color: $white;
+            background-color: $light-black;
+            display: inline-block;
+            padding: 8px 15px;
+            margin-top: -24rem;
+            font-weight: $fw-500;
+            border-radius: 20px;
+            z-index: 6;
+        }
+
+        .hero__title {
+            font-size: 65px;
+            line-height: 70px;
+            color: $white;
+            text-align: center;
+            z-index: 5;
+            @include flex-center;
+        }
+
+        .hero__description {
+            color: $white;
+            font-size: 17px;
+            z-index: 5;
+        }
 
         .signup-container {
             display: flex;
             align-items: center;
-            background-color: #1b1b1b;
+            background-color: #303030;
             border-radius: 40px;
             padding: 0 4px;
-            max-width: 400px;
-            height: 42px;
+            width: 530px;
+            height: 58px;
+            z-index: 5;
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
@@ -113,16 +179,47 @@ main {
             color: #000;
             border: none;
             border-radius: 40px;
-            padding: 0 20px;
-            height: 34px;
+            padding: 0 25px;
+            height: 47px;
             margin-right: 4px;
             cursor: pointer;
             font-weight: bold;
-            transition: background 0.3s ease;
+            transition: $tr-standard;
         }
 
         .signup-btn:hover {
-            background-color: #e5f44d;
+            transform: translateY(2px);
         }
+
+        .bottom__img {
+            position: absolute;
+            top: 19rem;
+            width: 1100px;
+        }
+
+        .pluggo__img {
+            width: 1180px;
+            z-index: 6;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    .features {
+        position: relative;
+        background-color: #000000;
+    }
+
+    .features::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        /* Height of the fade effect */
+        background: linear-gradient(to bottom, transparent, #000000);
+        pointer-events: none;
+        /* Allows you to still click things "under" the fade */
     }
 }
