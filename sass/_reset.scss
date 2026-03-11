@@ -5,6 +5,15 @@
     font-style: normal;
 }
 
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #9e9e9e;
+    border-radius: 2px;
+}
+
 *,
 *::before,
 *::after {
@@ -134,4 +143,34 @@ textarea {
 
 .pluggo-btn:hover .inner-container {
     transform: translateY(-50px);
+}
+
+.flip-btn {
+    position: relative;
+    height: 42px;
+    padding: 0 24px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.548);
+    background: transparent;
+    color: $white;
+    cursor: pointer;
+    overflow: hidden;
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        height: 84px;
+        transition: transform 0.4s ease;
+    }
+
+    .text span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 42px; // same as button
+    }
+
+    &:hover .text {
+        transform: translateY(-42px);
+    }
 }

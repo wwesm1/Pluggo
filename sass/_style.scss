@@ -16,6 +16,10 @@ nav {
         width: 140px;
     }
 
+    .menu_bar {
+        display: none;
+    }
+
     .nav__items {
         @include flex-center;
         gap: 10px;
@@ -38,40 +42,6 @@ nav {
     .log__btns {
         @include flex-center;
         gap: 12px;
-    }
-
-    .flip-btn {
-        position: relative;
-        height: 42px;
-        padding: 0 24px;
-        border-radius: 40px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        background: transparent;
-        color: $white;
-        cursor: pointer;
-        overflow: hidden;
-    }
-
-    .flip-btn .text {
-        display: flex;
-        flex-direction: column;
-        transition: transform $tr-standard ease;
-    }
-
-    .flip-btn span span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 42px;
-    }
-
-    .flip-btn:hover .text {
-        transform: translateY(-42px);
-    }
-
-    .border_btn {
-        border-left: 2px solid $white;
-        padding: 0 12px;
     }
 }
 
@@ -577,18 +547,126 @@ main {
 }
 
 footer {
-    padding: 7rem;
+    padding: 8rem 7rem 3rem 7rem;
 
     .footer {
         background: url('../assets/photos/background.avif');
-        border-top-left-radius: 40px;
-        border-top-right-radius: 40px;
+        border-radius: 40px;
         background-size: cover;
-        background-position: center;
+        background-position: cover;
         min-width: 100%;
-        padding: 3rem;
+        padding: 5rem 5.1rem;
         margin: 0 auto;
-        flex-flow: column;
-        gap: 20px;
+
+        .contact-us {
+            @include flex-space-between;
+
+            .contact {
+                @include flex-column;
+                gap: 50px;
+            }
+
+            .about {
+                font-size: 55px;
+            }
+
+            .footer__items {
+                @include flex-start;
+                align-items: start;
+                gap: 70px;
+
+                li {
+                    color: $white
+                }
+
+                li:nth-child(1) {
+                    font-size: 25px;
+                    margin-bottom: 1.5rem;
+                }
+
+                a {
+                    margin-bottom: 1rem;
+                    font-size: 20px;
+                    transition: $tr-standard;
+
+                    &:hover {
+                        color: #f2f962; 
+                    }
+                }
+            }
+        }
+
+        .apps {
+            @include flex-space-between;
+            margin-top: 3rem;
+
+            img {
+                width: 160px;
+            }
+
+            .app {
+                display: flex;
+                gap: 12px;
+                padding: 20px;
+            }
+
+            .app a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 46px;
+                height: 46px;
+                border-radius: 50%;
+                border: 1px solid #333333;
+                background-color: transparent;
+                transition: all 0.3s ease-in-out;
+            }
+
+            .app a .footer-social-icon {
+                width: 23px;
+                height: 23px;
+                fill: #ffffff;
+                transition: fill 0.3s ease-in-out;
+            }
+
+            .app a:hover {
+                background-color: #d9f01a;
+                border-color: #d9f01a;
+            }
+
+            .app a:hover .footer-social-icon {
+                fill: #000000;
+            }
+        }
+
+        .line {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 3rem;
+        }
+
+        .bottom_words {
+            @include flex-space-between;
+            margin-top: 2rem;
+            color: $white;
+
+            .link {
+                color: #f2f962;
+                text-decoration: underline;
+            }
+
+            .licence {
+                @include flex-start;
+                gap: 40px;
+
+                .word {
+                    transition: $tr-standard;
+                    font-size: 17px;
+
+                    &:hover {
+                        color: #f2f962;
+                    }
+                }
+            }
+        }
     }
 }
