@@ -458,39 +458,6 @@ main {
             @include flex-column;
             align-items: start;
 
-            .pluggo-btn {
-                background-color: #f2f962;
-                color: #000;
-                border: none;
-                padding: 0 25px;
-                height: 52px;
-                font-size: 17px;
-                font-weight: 600;
-                border-radius: 50px;
-                cursor: pointer;
-                overflow: hidden;
-                display: block;
-                margin-top: 3rem;
-            }
-
-            .inner-container {
-                display: flex;
-                flex-direction: column;
-                transition: transform 0.4s cubic-bezier(0.6, 0, 0.2, 1);
-            }
-
-            .text-main,
-            .text-hover {
-                display: block;
-                height: 50px;
-                line-height: 50px;
-                text-align: center;
-            }
-
-            .pluggo-btn:hover .inner-container {
-                transform: translateY(-50px);
-            }
-
             .title {
                 font-size: 50px;
                 margin-left: -0.8rem;
@@ -554,7 +521,7 @@ main {
             .answer {
                 margin-top: 2rem;
                 color: #9f9f9f;
-                max-height: 0; 
+                max-height: 0;
                 overflow: hidden;
                 display: none;
                 transition: max-height 0.4s ease, display 0.4s ease, margin 0.4s ease;
@@ -576,7 +543,7 @@ main {
             }
 
             .faq.active .answer {
-                max-height: 200px; 
+                max-height: 200px;
                 transition: $tr-standard;
                 display: block;
                 margin-top: 2rem;
@@ -588,4 +555,40 @@ main {
         }
     }
 
+    .business {
+        margin-top: 9rem;
+        background: url("../assets/photos/section-photo.webp") no-repeat 50% 50%;
+        background-size: cover;
+        text-align: center;
+        padding: 80px 0;
+        @include flex-column-center;
+        gap: 20px;
+        border-radius: 30px;
+
+        .about {
+            font-size: 53px;
+            font-weight: 500;
+        }
+
+        .pluggo-btn {
+            margin-top: 1rem;
+        }
+    }
+}
+
+footer {
+    padding: 7rem;
+
+    .footer {
+        background: url('../assets/photos/background.avif');
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        background-size: cover;
+        background-position: center;
+        min-width: 100%;
+        padding: 3rem;
+        margin: 0 auto;
+        flex-flow: column;
+        gap: 20px;
+    }
 }
