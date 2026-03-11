@@ -90,6 +90,39 @@ textarea {
   color: #ffffff;
 }
 
+.pluggo-btn {
+  background-color: #f2f962;
+  color: #000;
+  border: none;
+  padding: 0 25px;
+  height: 52px;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  display: block;
+  margin-top: 3rem;
+}
+
+.inner-container {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.6, 0, 0.2, 1);
+}
+
+.text-main,
+.text-hover {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.pluggo-btn:hover .inner-container {
+  transform: translateY(-50px);
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -544,16 +577,17 @@ main .unknown_section .words .about {
   color: #aaaaaa;
 }
 main .faqs {
-  margin-top: 9rem;
+  margin-top: 2rem;
 }
 main .faqs .title {
   display: flex;
   justify-content: center;
   width: 80px;
-  margin: 1rem auto;
+  margin: 10rem auto 1rem auto;
 }
 main .faqs .about {
   text-align: center;
+  margin-bottom: 4rem;
 }
 main .faqs .accordion {
   display: flex;
@@ -570,6 +604,7 @@ main .faqs .accordion .faqs {
   position: relative;
   border-radius: 16px;
   padding: 28px;
+  align-items: center;
   width: 900px;
   overflow: hidden;
 }
@@ -582,45 +617,35 @@ main .faqs .accordion .faqs::before {
   left: 0;
   top: 10%;
   height: 80%;
-  width: 1.7px;
+  width: 1.1px;
   background: linear-gradient(to bottom, transparent, #f5f5f5, transparent);
-  transition: opacity 0.3s ease;
-}
-main .faqs .accordion .faq {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  height: 120px;
-  padding: 25px 60px 25px 25px;
-  background: #151515;
-  border-radius: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 main .faqs .accordion .answer {
+  margin-top: 2rem;
   color: #9f9f9f;
-  margin-top: 12px;
-  opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3s ease;
+  display: none;
+  transition: max-height 0.4s ease, display 0.4s ease, margin 0.4s ease;
 }
 main .faqs .accordion .faq-icon {
   position: absolute;
   right: 25px;
   top: 50%;
   transform: translateY(-50%);
-  width: 18px;
-  transition: all 0.3s ease;
+  transition: transform 0.4s ease;
+  width: 23px;
 }
 main .faqs .accordion .faq.active {
   justify-content: flex-start;
+  transition: all 0.3s ease;
   height: auto;
 }
 main .faqs .accordion .faq.active .answer {
-  opacity: 1;
   max-height: 200px;
+  transition: all 0.3s ease;
+  display: block;
+  margin-top: 2rem;
 }
 main .faqs .accordion .faq.active .faq-icon {
   transform: translateY(-50%) rotate(45deg);
