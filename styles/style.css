@@ -573,6 +573,7 @@
 html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -752,6 +753,9 @@ nav .nav__items li {
   transition: all 0.3s ease;
 }
 nav .nav__items li:hover {
+  border: 1px solid #ffffff;
+}
+nav .nav__items li.active {
   border: 1px solid #ffffff;
 }
 nav .log__btns {

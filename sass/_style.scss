@@ -36,6 +36,10 @@ nav {
             &:hover {
                 border: 1px solid $white;
             }
+
+            &.active {
+                border: 1px solid $white;
+            }
         }
     }
 
@@ -590,7 +594,7 @@ footer {
                     transition: $tr-standard;
 
                     &:hover {
-                        color: #f2f962; 
+                        color: #f2f962;
                     }
                 }
             }
