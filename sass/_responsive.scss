@@ -586,7 +586,7 @@
         padding: 50px 10px;
 
         .about {
-            font-size: 32px;
+            font-size: 32px!important;
             text-align: center;
         }
     }
@@ -595,7 +595,7 @@
         margin-top: 1.5rem;
 
         .title {
-            width: 50px;
+            width: 40px;
             font-size: 20px;
             margin: 3rem auto!important;
         }
@@ -617,7 +617,7 @@
                 font-size: 16px;
 
                 .question {
-                    font-size: 18px !important;
+                    font-size: 15px !important;
                     margin-left: -1rem;
                 }
             }

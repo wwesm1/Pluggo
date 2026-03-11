@@ -466,14 +466,14 @@
     padding: 50px 10px;
   }
   .business .about {
-    font-size: 32px;
+    font-size: 32px !important;
     text-align: center;
   }
   .faqs {
     margin-top: 1.5rem;
   }
   .faqs .title {
-    width: 50px;
+    width: 40px;
     font-size: 20px;
     margin: 3rem auto !important;
   }
@@ -493,7 +493,7 @@
     font-size: 16px;
   }
   .faqs .accordion .faqs .question {
-    font-size: 18px !important;
+    font-size: 15px !important;
     margin-left: -1rem;
   }
   .faqs .accordion .faqs::before {
@@ -790,6 +790,7 @@ main .hero .dot {
   color: #ffffff;
   position: absolute;
   font-size: 13px;
+  z-index: 1;
 }
 main .hero .dot1 {
   top: 11rem;
